@@ -1,0 +1,147 @@
+body {
+/*
+    font:BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* background-image: url(images/bg.png); */
+
+background-image: url('../img/fon.png');
+
+/*  */
+}
+
+.table {
+    background-color: white;
+}
+.rasp_data {
+    position: absolute;
+    padding-bottom: 1%;
+    padding-left: 1%;
+}
+span {
+    color: white;
+}
+.frm1 {
+ opacity: 0;
+ position: fixed;
+}
+.frm {
+
+    font-size: 25px;
+    color: white;
+    /* background-color: #1e2e50; */
+    background-color: white;
+    color:#1f446e;
+    border: 0;
+
+}
+.c_form {
+    background-color: none;
+    color: white;
+}
+input {
+    background-color: white;
+    color: #1f446e;
+    text-decoration: bold;
+    border-radius: 2%;
+    outline: none;
+    font-size: 25px;
+    border: 0;
+}
+.modal-header {
+
+    background-color: #1f446e;
+}
+select {
+    background-color: white;
+    color: #1f446e;
+    text-decoration: bold;
+    border-radius: 2%;
+    outline: none;
+    font-size: 25px;
+    border: 0;
+    position: relative;
+    -webkit-appearance: none;/* Chrome */
+    -moz-appearance: none;/* Firefox */
+    appearance: none;
+    text-align: center;
+    
+    
+}
+.div-select {
+    background-color: #1f446e;
+    color: white;
+    border-radius: 0%;
+    outline: none;
+}
+.custom-select {
+    background-color: #1f446e;
+    color: white;
+    border-radius: 0%;
+    outline: none;
+}
+.logo {
+    position: fixed;
+    width: 6%;
+    margin-top: 2%;
+    margin-left: 92%;
+    }
+.data {
+    background-color: #034876;
+    color:white;
+    padding-top: 1%;
+
+}
+.btn {
+    border-radius: 0%;
+}
+
+label  {
+    font-size: 20px;
+}
+  
+td {
+    text-align: center;
+    font-size: 17px;
+    
+}
+
+th {
+    text-align: center;
+    font-size: 17spx;
+}
+
+a:hover {
+    text-decoration: none;
+}
+hr 
+{
+    height: 5px;
+    border: 0px;
+}
+
+thead {
+
+background-color: #1f446e;
+color:white;
+border-color:black;
+}
+
+
+
+.back_image {
+position: fixed;
+width: 5%;
+margin-left: 2%;
+margin-top: 2%;
+
+}
+
+.btn_back {
+    position: fixed;
+    margin-top: 3%;
+    margin-left: 3%;
+    font-size: 30px;
+    color:#1f446e;
+}
+.btn_back:hover {
+    color:#1f446e
+}

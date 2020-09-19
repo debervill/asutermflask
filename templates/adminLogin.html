@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdminLogin</title>
+</head>
+<body>
+
+     <h1>Назови имя, друг и пройдешь</h1>
+    <form action="{{ url_for('adminLogin') }}" method="post">
+            {{ form.username }}
+            {{ form.password }}
+            {{ form.submit }}
+            {{ form.csrf_token }}
+        </form>
+
+</body>
+</html>

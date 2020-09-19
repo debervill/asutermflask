@@ -1,0 +1,10 @@
+venv
+.vscode
+.idea
+*.sql
+*.pyc
+__pycahe__
+.DS_Store
+static/img/prepfot/
+terminal.sqlite
+log/

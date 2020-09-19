@@ -1,0 +1,32 @@
+.box1 {
+    background-color: wheat;
+}
+.box1 img {
+    max-width: 100%;
+}
+
+.box2 {
+    background-color: sandybrown;
+}
+
+.box2 img {
+    max-width: 100%;
+}
+
+.box3 {
+    background-color: tan;
+}
+.box3 img {
+    max-width: 100%;
+}
+
+.box4 {
+    background-color:  peru
+}
+
+.box_main {
+
+    background-color: blue;
+}
+
+  

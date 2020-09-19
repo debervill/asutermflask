@@ -1,0 +1,50 @@
+body {
+    background-image: url('../img/fon.png');
+}
+
+.group_img {
+    width: 50%;
+
+}
+
+.logo {
+    position: fixed;
+    width: 6%;
+    margin-top: 2%;
+    margin-left: 92%;
+    }
+
+
+.data_text_up {
+    font-size: 150%;
+    margin-top: 120%;
+    color: white;
+}
+.data_text_down {
+    font-size: 150%;
+    margin-bottom: 100%;
+    color: white;
+}
+
+.data_text {
+    font-size: 150%;
+    color: white;
+}
+
+
+
+.group_text, .ekz_text, .prep_text, .dop_text {
+    color: #790506;
+    font-size: 23px;
+}
+
+.group, .ekz, .prep, .dop {
+    background-color: #f4cb06;
+    /* border-radius: 5%; */
+}
+
+.heading {
+    font-size: 45px;
+    color:#d0a701;
+}
+

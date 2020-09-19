@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="ru">
+
+<head>
+  <title>Терминал АСУ</title>
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/rasp_group.css')}}">
+
+</head>
+
+<body>
+
+
+  <a href="#" class=""><img class="logo align-middle" src="{{url_for('static', filename='img/logo.png')}}"></a>
+  <a href="index.html" class="btn_back"> Назад </a>
+
+  <nav class="navbar navbar-expand-sm  navbar-light justify-content-center">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="" style="float:center"> Расписание по преподавателям</h1>
+
+  </nav>
+
+
+  <div class="container justify-content-around pt-3 form-group c_form pt-1 text-center">
+
+
+    <form method="post" class="form-control-lg border-0  text-center" action="{{ url_for('rasp_prep') }}">
+      <div class="row justify-content-around text-center ">
+        <div class="form-group div-select col-lg-4 pt-2 text-center">Преподаватель<p class="pt-1">{{ form.stepenField }}
+          </p>
+        </div>
+        <div class="form-group div-select col-lg-4 pt-2 text-center">День недели<p class="pt-1">{{ form.day }}</p>
+        </div>
+        <div class="form-group div-select col-lg-4 pt-2 text-center">
+          <p class="pt-3"></p>{{form.submit1 }}</p>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="container" id=table>
+    <table class="table table-striped table-bordered ">
+      <thead>
+        <tr>
+          <th scope="col">№</th>
+          <th scope="col">Время занятий</th>
+          <th scope="col">Занятия на неделе</th>
+          <th scope="col">Аудитория</th>
+          <th scope="col">Группа</th>
+          <th scope="col">Дисциплина</th>
+          <th scope="col">Тип занятий</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in range(countStr) %}
+        <tr>
+          <th scope="row">{{i + 1}}</th>
+          <td class="col-auto">{{table[6 * i]}}</td>
+          <td class="col-auto">{{table[6 * i + 1]}}</td>
+          <td class="col-auto">{{table[6 * i + 2]}}</td>
+          <td class="col-auto">{{table[6 * i + 3]}}</td>
+          <td class="col-auto">{{table[6 * i + 4]}}</td>
+          <td class="col-auto">{{table[6 * i + 5]}}</td>
+
+        </tr>
+
+        {% endfor %}
+
+      </tbody>
+    </table>
+    <hr>
+    <div class="container-fluid data text-center" id="fotdata">
+      <div class="row justify-content-around">
+
+        <div class="data col-3">
+          <h5 class="justify-content-center ">{{days}}</h5>
+        </div>
+
+        <div class="data col-3 ">
+          <h5 class="justify-content-center ">{{day_week}}</h5>
+        </div>
+
+        <div class="data col-3">
+          <h5 class="justify-content-center ">Числитель</h5>
+        </div>
+
+        <div class="data col-3">
+          <h5 class="justify-content-center ">10:00</h5>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog border-0" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col modul-foto">
+                <img src="images/Alex.jpg" class="border border-dark">
+              </div>
+              <div class="col text-center">
+                Сальный Александр Геннадьевич, Старший преподаватель
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary " data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</body>
+<footer class="page-footer justify-content-center mx-auto ">
+
+</footer>
+<!-- Footer -->
+</body>
+</div>
+
+</html>

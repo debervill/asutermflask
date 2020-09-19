@@ -1,0 +1,48 @@
+body {
+    /* background-image: url(images/bg.png); */
+
+    /*background: url('../img/fon.png');*/
+    background: url('../img/fon.png');
+}
+
+.group_img {
+    width: 50%;
+
+}
+
+.logo {
+    position: fixed;
+    width: 6%;
+    margin-top: 2%;
+    margin-left: 92%;
+    }
+.data_text_up {
+    font-size: 150%;
+    margin-top: 120%;
+}
+.data_text_down {
+    font-size: 150%;
+    margin-bottom: 100%;
+}
+
+.data_text {
+    font-size: 150%;
+}
+
+.group_text, .ekz_text, .prep_text, .dop_text {
+    color:white;
+    font-size: 23px;
+}
+
+.group, .ekz, .prep, .dop {
+    background-color: #034876;
+    /* border-radius: 5%; */
+}
+
+.heading {
+    font-size: 45px;
+}
+
+h1{
+    text-align: center;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="{{ url_for('addsql') }}">
+            {{ form.hidden_tag() }}
+            {{ form.fioField.label.text }}
+            {{ form.fioField }}
+            {{ form.dolgnostField.label.text }}
+            {{ form.dolgnostField }}
+            {{ form.stepenField.label.text }}
+            {{ form.stepenField }}
+            {{ form.photoField }}
+            {{ form.submit }}
+    </form>
+
+</body>
+</html>

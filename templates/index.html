@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="ru">
+
+<head>
+	<title>Терминал АСУ</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.min.css')}}">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+	<!---<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+
+<body style="background-image: url({{ url_for('static', filename='img/fon.png') }})">
+	<nav class="navbar navbar-expand-sm pb-3 navbar-light justify-content-center">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h1 class="zagolovok" style="float:center"> Информационная система кафедры АСУ</h1>
+			</div>
+
+		</div>
+	</nav>
+	<div class="container mt-3" id="buttons">
+		<div class="row justify-content-between">
+			<div class="col-5 pt-3 pb-3 mb-2 text-center group rounded">
+				<a class="btn " href="rasp_group.html">
+					<p class="group_text pt-2" onclick="proverka()">Расписание по группам</p>
+					<img class="group_img align-middle" src="{{url_for('static', filename='img/rasp_group.png')}}">
+				</a>
+			</div>
+
+			<div class="col-2 text-center  ">
+				<p class="data_text_up ">{{day_week}}</p>
+			</div>
+
+			<div class="col-5 pt-3 pb-3 mb-2 text-center ekz rounded">
+				<a class="btn " href="rasp_ekz.html">
+					<p class="ekz_text pt-2">Расписание экзаменов</p>
+					<img class="group_img align-middle" src="{{url_for('static', filename='img/rasp_ekz.png')}}">
+				</a>
+			</div>
+
+			<div class="w-100"></div>
+			<div class="col-12 text-center  ">
+				<div class="row">
+					<div class="col-5"></div>
+					<div class="col-2">
+						<p class="data_text">{{days}}<br></p>
+					</div>
+					<div class="col-5"></div>
+
+					<div class=flash>{{ message }}</div>
+
+				</div>
+			</div>
+
+			<div class="w-100"></div>
+
+			<div class="col-5 mt-1 text-center prep rounded">
+				<a class="btn " href="rasp_prep.html">
+					<p class="prep_text pt-2">Расписание преподавателей<br>кафедры АСУ</p>
+					<img class="prep_img align-middle" src="{{url_for('static', filename='img/rasp_prep.png')}}">
+
+				</a>
+			</div>
+
+			<div class="col-2 text-center  ">
+				<p class="data_text_down ">{{week}}</p>
+			</div>
+
+
+			<div class="col-5 mt-1 text-center prep rounded">
+				<a class="btn" href="rasp_dop.html">
+					<p class="dop_text pt-2">Расписание дополнительных занятий<br>кафедры АСУ</p>
+					<img class="dop_img align-middle" src="{{url_for('static', filename='img/rasp_dop.png')}}">
+
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<!-- Footer -->
+
+</body>
+</div>
+
+</html>
