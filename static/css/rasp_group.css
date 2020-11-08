@@ -143,5 +143,11 @@ margin-top: 2%;
     color:#1f446e;
 }
 .btn_back:hover {
-    color:#1f446e
+    color:#1f446e;
+}
+
+#backbutton{
+    color:#1f446e;
+    background-color: white;
+    font-size:25px;
 }
