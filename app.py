@@ -31,7 +31,6 @@ def rasp_group():
     raspform = SelectGroupForm(request.form)
     grp = getGroup()
     for i in grp:
-        print("i = ",i)
         raspform.group.choices.append(i)
 
     raspform.day.choices = ['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота']

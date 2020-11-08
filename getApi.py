@@ -16,7 +16,6 @@ def getCountTable(table):
     # print("A =================== ",int(a))
     return int((a)/6)
 
-
 def getCountTable1(table):
     # print("1111111111111",table)
     a = 0
@@ -105,6 +104,8 @@ def getPrepRasp(NamePrep, DayOfWeek="Понедельник"):
                     table[3 + 6 * int(j)] = (grn[str(a)][3])
                     table[4 + 6 * int(j)] = (grn[str(a)][4])
                     table[5 + 6 * int(j)] = (grn[str(a)][5])
+            print(table)
+
         except KeyError:
             print("KeyError")
             for i in range(48):

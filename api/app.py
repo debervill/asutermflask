@@ -73,7 +73,7 @@ def getTeacPlan():
     sem_no = request.args.get('sem_no', None)
     tp_year = request.args.get('tp_year', None)
     teach_id = teach[teach_name.lower()]
-    return actions.getTeachPlan(teach_name, teach_id, sem_no, tp_year)
+    return actions.getTeachPlan(tp_year, sem_no, teach_id, teach_name)
 
 @app.route('/api/v1.0/table/teach_plan', methods=['GET'])
 def getTableTeacPlan():
