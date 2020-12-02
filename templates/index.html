@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<html lang="ru">
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.min.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <meta name="viewport" content="width=device-width initial-scale=1">
 	<title>Терминал АСУ</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-grid.min.css')}}">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
-	<!---<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-	<meta name="viewport" content="width=device-width initial-scale=1">
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
 </head>
 
 <body style="background-image: url({{ url_for('static', filename='img/fon.png') }})">
@@ -60,7 +58,7 @@
 
 			<div class="col-5 mt-1 text-center prep rounded">
 				<a class="btn " href="rasp_prep.html">
-					<p class="prep_text pt-2">Расписание преподавателей<br>кафедры АСУ</p>
+					<p class="prep_text pt-2">Расписание преподавателей</p>
 					<img class="prep_img align-middle" src="{{url_for('static', filename='img/rasp_prep.png')}}">
 
 				</a>
@@ -81,11 +79,6 @@
 		</div>
 	</div>
 
-	<!-- Footer -->
-
-	<!-- Footer -->
-
-</body>
-</div>
+    </body>
 
 </html>

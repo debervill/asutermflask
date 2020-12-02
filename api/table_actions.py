@@ -1,5 +1,5 @@
 import requests
-
+from proxy import proxyDict
 def getFastPlanTable(gp_name, gp_id):
     headers = {'X-Requested-With': 'XMLHttpRequest',
            'User-Agent': 'Mozilla/5.0',
@@ -10,7 +10,7 @@ def getFastPlanTable(gp_name, gp_id):
         'tab': '7',
         'gp_name': gp_name,
         'gp_id': gp_id}
-    response = requests.post(url = url, data = params, headers=headers)
+    response = requests.post(url = url, data = params, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     return(response.text)
@@ -27,7 +27,7 @@ def getExtPlanTable(gp_name, gp_id, sem_no, tp_year):
         'gp_id': gp_id,
         'sem_no': sem_no,
         'tp_year': tp_year}
-    response = requests.post(url = url, data = params, headers=headers)
+    response = requests.post(url = url, data = params, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     return(response.text)
@@ -46,7 +46,7 @@ def getDeptPlanTable(dep_name, dep_id, sem_no, tp_year):
         'sort': 1,        
         'sem_no': sem_no,
         'tp_year': tp_year}
-    response = requests.post(url = url, data = params, headers=headers)
+    response = requests.post(url = url, data = params, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     return(response.text)
@@ -64,7 +64,7 @@ def getTeachPlanTable(teach_name, teach_id, sem_no, tp_year):
         'pr_id': teach_id,       
         'sem_no': sem_no,
         'tp_year': tp_year}
-    response = requests.post(url = url, data = params, headers=headers)
+    response = requests.post(url = url, data = params, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     return(response.text)

@@ -46,26 +46,7 @@ input {
     font-size: 25px;
     border: 0;
 }
-.modal-header {
 
-    background-color: #1f446e;
-}
-select {
-    background-color: white;
-    color: #1f446e;
-    text-decoration: bold;
-    border-radius: 2%;
-    outline: none;
-    font-size: 25px;
-    border: 0;
-    position: relative;
-    -webkit-appearance: none;/* Chrome */
-    -moz-appearance: none;/* Firefox */
-    appearance: none;
-    text-align: center;
-    
-    
-}
 .div-select {
     background-color: #1f446e;
     color: white;
@@ -151,3 +132,9 @@ margin-top: 2%;
     background-color: white;
     font-size:25px;
 }
+.page-footer{
+    bottom: 45px;
+}
+
+
+

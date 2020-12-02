@@ -1,6 +1,6 @@
 import requests
 import json
-
+from proxy import proxyDict
 from bs4 import BeautifulSoup
 
 
@@ -10,7 +10,7 @@ def getGroups(returnJson=0):
                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
     url = "http://tplan.madi.ru/tasks/task3,7_fastview.php"
 
-    response = requests.get(url=url, headers=headers)
+    response = requests.get(url=url, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     soup = BeautifulSoup(response.content, 'lxml')
@@ -31,7 +31,7 @@ def getGroupsList(returnJson=0):
 
     url = "http://tplan.madi.ru/tasks/task3,7_fastview.php"
 
-    response = requests.get(url=url, headers=headers)
+    response = requests.get(url=url, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     soup = BeautifulSoup(response.content, 'lxml')
@@ -53,7 +53,7 @@ def getDepart(returnJson=0):
 
     url = "http://tplan.madi.ru/tasks/task11_kafview.php"
 
-    response = requests.get(url=url, headers=headers)
+    response = requests.get(url=url, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     soup = BeautifulSoup(response.content, 'lxml')
@@ -76,7 +76,7 @@ def getTeach(returnJson=0):
 
     url = "http://tplan.madi.ru/tasks/task8_prepview.php"
 
-    response = requests.get(url=url, headers=headers)
+    response = requests.get(url=url, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     soup = BeautifulSoup(response.content, 'lxml')
@@ -101,7 +101,7 @@ def getFastPlan(gp_name, gp_id):
     params = {
         'tab': '7',
         'gp_id': gp_id}
-    response = requests.post(url=url, data=params, headers=headers)
+    response = requests.post(url=url, data=params, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     table_data = [[cell.text for cell in row()]
@@ -123,7 +123,7 @@ def getExtPlan(gp_name, gp_id, sem_no, tp_year):
         'gp_id': gp_id,
         'sem_no': sem_no,
         'tp_year': tp_year}
-    response = requests.post(url=url, data=params, headers=headers)
+    response = requests.post(url=url, data=params, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     table_data = [[cell.text for cell in row()]
@@ -146,7 +146,7 @@ def getDeptPlan(dep_name, dep_id, sem_no, tp_year):
         'sort': 1,
         'sem_no': sem_no,
         'tp_year': tp_year}
-    response = requests.post(url=url, data=params, headers=headers)
+    response = requests.post(url=url, data=params, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     table_data = [[cell.text for cell in row()]
@@ -171,7 +171,7 @@ def getTeachPlan(tp_year, sem_no, teach_id, teach_name):
         'pr_id': teach_id,
         'pr_name': teach_name
         }
-    response = requests.post(url=url, data=params, headers=headers)
+    response = requests.post(url=url, data=params, headers=headers, proxies=proxyDict)
     response.encoding = 'utf-8'
 
     table_data = [[cell.text for cell in row()]
@@ -188,6 +188,6 @@ def getGroupId(gp_name):
     return gp_id
 
 if __name__ == '__main__':
-    pr = getTeachPlan(tp_year='20', sem_no='1', teach_id='1711', teach_name='tets' )
+    pr = getGroups(0)
     print(pr)
 
